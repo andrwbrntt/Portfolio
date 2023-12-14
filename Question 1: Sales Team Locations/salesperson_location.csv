@@ -1,0 +1,51 @@
+location_id,city,state,market
+1,Austin,TX,CTX
+2,Houston,TX,HOU
+3,Dallas,TX,DFW
+4,Leander,TX,CTX
+5,Bellaire,TX,HOU
+6,Katy,TX,HOU
+7,Flowermound,TX,DFW
+8,Fort Worth,TX,DFW
+9,Cypress,TX,HOU
+10,Pflugerville,TX,CTX
+11,Irving,TX,DFW
+12,Spring,TX,HOU
+13,Houston,TX,HOU
+14,Arlington,TX,DFW
+15,Plano,TX,DFW
+16,Conroe,TX,HOU
+17,Lakeway,TX,CTX
+18,Galveston,TX,HOU
+19,Frisco,TX,DFW
+20,Dallas,TX,DFW
+21,Cypress,TX,HOU
+22,Lewisville,TX,DFW
+23,Arlington,TX,DFW
+24,Austin,TX,CTX
+25,Houston,TX,HOU
+26,Austin,TX,CTX
+27,League City,TX,HOU
+28,Flowermound,TX,DFW
+29,Denton,TX,DFW
+30,Houston,TX,HOU
+31,Oak Ridge,TX,HOU
+32,Memorial City,TX,HOU
+33,Kyle,TX,CTX
+34,Leander,TX,CTX
+35,Allen,TX,DFW
+36,Grapevine,TX,DFW
+37,Houston,TX,HOU
+38,Fort Worth,TX,DFW
+39,Dallas,TX,DFW
+40,Pflugerville,TX,CTX
+41,Allen,TX,DFW
+42,Katy,TX,HOU
+43,Grapevine,TX,DFW
+44,Coppell,TX,DFW
+45,League City,TX,HOU
+46,Houston,TX,HOU
+47,Keller,TX,DFW
+48,Austin,TX,CTX
+49,Georgetown,TX,CTX
+50,Houston,TX,HOU
