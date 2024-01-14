@@ -1,3 +1,3 @@
 Table of Contents
 
-SQL Project #1: Sales Data
+#1 Video Game Data
