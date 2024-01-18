@@ -1,5 +1,5 @@
 Database sourced from Kaggle
 
-user: ANDRII SAMOSHYN
+user: TONY GORDON JR
 
-link: https://www.kaggle.com/datasets/mrmorj/dataset-of-songs-in-spotify
+link: https://www.kaggle.com/datasets/tonygordonjr/spotify-dataset-2023
