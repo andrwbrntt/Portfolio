@@ -5,7 +5,11 @@ Table of Contents
 SQL
 
 INNER JOIN
+
 LEFT JOIN
+
 RIGHT JOIN
+
 CROSS JOIN
+
 SELF JOIN
