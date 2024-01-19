@@ -20,14 +20,14 @@ ORDER BY o.order_total DESC;
 Expected Output
 
 first_name      last_name        order_total
-		                              240
-Emily	          Jarvis	          150
-Adam	          Johnson	          135
-		                              120
-Rob	            Gonzalez	        120
+		        	240
+Emily	        Jarvis	          150
+Adam	        Johnson	          135
+				  120
+Rob	        Gonzalez	  120
 Rachel	        Sweeney	          90
-Joseph	        James	            50
-Jan	            Smith	            30
-Theresa	        Scott	            30
-Sarah	          Irving	          25
+Joseph	        James	          50
+Jan	        Smith	          30
+Theresa	        Scott	          30
+Sarah	        Irving	          25
 */
