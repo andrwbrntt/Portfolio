@@ -18,14 +18,14 @@ ORDER BY o.order_total;
 Expected Output
 
 first_name      last_name        order_total
-Sarah	          Irving	
+Sarah	        Irving	
 Theresa	        Scott	
-Grant	          Barnett	          120
-Rob	            Gonzalez	        120
-Adam	          Johnson	          135
-Emily	          Jarvis	          150
-Brian	          Greyson	          240
-Jan	            Smith	            30
-Joseph	        James	            50
+Grant	        Barnett	          120
+Rob	        Gonzalez	  120
+Adam	        Johnson	          135
+Emily	        Jarvis	          150
+Brian	        Greyson	          240
+Jan	        Smith	          30
+Joseph	        James	          50
 Rachel	        Sweeney	          90
 */
