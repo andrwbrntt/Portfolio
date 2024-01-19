@@ -20,7 +20,7 @@ ORDER BY o.order_total DESC;
 Expected Output
 
 first_name      last_name        order_total
-		        	240
+		        	  240
 Emily	        Jarvis	          150
 Adam	        Johnson	          135
 				  120
