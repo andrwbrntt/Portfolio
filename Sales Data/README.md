@@ -24,8 +24,8 @@ be ordered in time.
    - Wins a personalized, engraved Rookie of the Year coin in a glass case
 
 2. **The Precision Award**
-  - Highest sales accuracy of the year
-  - Wins a Montblanc Meisterstuck Platinum-Coated Rollerball
+   - Highest sales accuracy
+   - Wins a Montblanc Meisterstuck Platinum-Coated Rollerball
 
 3. **The Sixer Award**
    - Projects sold above the average of projects that are at least $100,000
