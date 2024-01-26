@@ -16,12 +16,32 @@ be ordered in time.
 
 
 ## Award Categories
-1. Rookie of the Year
+1. **Rookie of the Year**
    - Most revenue earned within a first-year tenure
    - 6 month cutoff
-   - Use full year revenues where available
+   - Use full year revenue where available
    - Prorate if a full year revenue is unavailable
    - Wins a personalized, engraved Rookie of the Year coin in a glass case
+
+2. **The Precision Award**
+  - Highest sales accuracy of the year
+  - Wins a Montblanc Meisterstuck Platinum-Coated Rollerball
+
+3. **The Sixer Award**
+   - Projects sold above the average of projects that are at least $100,000
+   - Can have multiple winners
+   - Wins a Hamilton Intra-Matic watch
+
+4. **The High-Roller Award**
+   - Most revenue earned
+   - Wins a 3 day, all expenses paid trip to New York with choice of location and Michelin Star restaurant
+  
+5. **THE MVP**
+   - The most renue sold with the highest sale accuracy and customer satisfaction
+   - Wins a 4 day, all expenses paid trip to Bora Bora
+
+
+## Sales Data
 
 
 
