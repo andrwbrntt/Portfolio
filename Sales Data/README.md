@@ -8,7 +8,7 @@ be ordered in time.
 
 
 ## KPIs
-******
+
 1. Total Revenue
 2. Average Ticket
 3. Average Sale Accuracy
