@@ -19,16 +19,16 @@ be ordered in time.
 
 1. **Rookie of the Year Award**
 
-**Parameters**:
-  - The award goes to the salesperson with the highest revenue within their first year tenure
-  - There can only be 1 winner
-  - 6 month eligibility cutoff
-      - i.e. Those hired after 6/1/2022 and before 6/1/2023
-  - If a full year has been completed, the full year revenue will be used
-  - If a full year has not yet been completed, the remainder will be prorated
+  **Parameters**:
+    - The award goes to the salesperson with the highest revenue within their first year tenure
+    - There can only be 1 winner
+    - 6 month eligibility cutoff
+        - i.e. Those hired after 6/1/2022 and before 6/1/2023
+    - If a full year has been completed, the full year revenue will be used
+    - If a full year has not yet been completed, the remainder will be prorated
 
-**Award**:
-  - A Personalized Rookie of the Year Coin inside a glass case
+  **Award**:
+    - A Personalized Rookie of the Year Coin inside a glass case
 
 2. **The Precision Award**
 
