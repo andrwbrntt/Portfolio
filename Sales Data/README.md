@@ -15,8 +15,8 @@ be ordered in time.
 4. Average Customer Satisfaction
 
 
-##Awards
-******
+## Awards
+
 1. **Rookie of the Year Award**
 **Parameters**:
   - The award goes to the salesperson with the highest revenue within their first year tenure
