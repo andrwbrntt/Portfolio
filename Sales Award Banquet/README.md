@@ -10,9 +10,10 @@ be ordered in time.
 ## KPIs
 
 1. Total Revenue
-2. Average Ticket
-3. Average Sale Accuracy
-4. Average Customer Satisfaction
+2. Total Number of Sales
+3. Average Ticket
+4. Average Sale Accuracy
+5. Average Customer Satisfaction
 
 
 ## Award Categories
