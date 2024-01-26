@@ -1,4 +1,4 @@
-#Objective#
+# Objective
 ******
 With the company Sales Award Banquet coming up, the Director of Sales is looking to present
 the year in review via key KPIs and compare them to the prior year.
@@ -7,7 +7,7 @@ The Director also needs to know which salespeople won which awards so that the a
 be ordered in time.
 
 
-##KPIs
+## KPIs
 ******
 1. Total Revenue
 2. Average Ticket
