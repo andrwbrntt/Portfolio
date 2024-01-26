@@ -17,7 +17,7 @@ be ordered in time.
 
 ## Award Categories
 1. **Rookie of the Year**
-   - Most revenue earned within a first-year tenure
+   - Most revenue sold within a first-year tenure
    - 6 month cutoff
    - Use full year revenue where available
    - Prorate if a full year revenue is unavailable
@@ -33,11 +33,11 @@ be ordered in time.
    - Wins a Hamilton Intra-Matic watch
 
 4. **The High-Roller Award**
-   - Most revenue earned
+   - Most revenue sold
    - Wins a 3 day, all expenses paid trip to New York with choice of location and Michelin Star restaurant
   
 5. **THE MVP Award**
-   - The most renue sold with the highest sale accuracy and customer satisfaction
+   - The most revenue sold with the highest sale accuracy and customer satisfaction
    - Wins a 4 day, all expenses paid trip to Bora Bora
 
 
