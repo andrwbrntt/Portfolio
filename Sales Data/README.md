@@ -36,7 +36,7 @@ be ordered in time.
    - Most revenue earned
    - Wins a 3 day, all expenses paid trip to New York with choice of location and Michelin Star restaurant
   
-5. **THE MVP**
+5. **THE MVP Award**
    - The most renue sold with the highest sale accuracy and customer satisfaction
    - Wins a 4 day, all expenses paid trip to Bora Bora
 
