@@ -18,6 +18,7 @@ be ordered in time.
 ## Awards
 
 1. **Rookie of the Year Award**
+
 **Parameters**:
   - The award goes to the salesperson with the highest revenue within their first year tenure
   - There can only be 1 winner
