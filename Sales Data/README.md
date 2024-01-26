@@ -15,7 +15,13 @@ be ordered in time.
 4. Average Customer Satisfaction
 
 
-## Awards
+## Award Categories
+1. Rookie of the Year
+   - Most revenue earned within a first-year tenure
+   - 6 month cutoff
+   - Use full year revenues where available
+   - Prorate if a full year revenue is unavailable
+   - Wins a personalized, engraved Rookie of the Year coin in a glass case
 
 
 
