@@ -93,17 +93,17 @@ WHERE YEAR(sold_date) = 2022;
 
 SELECT
 	(SELECT SUM(sold_price)
-    FROM sold_projects
-    WHERE YEAR(sold_date) = 2023) AS revenue_2023,
-    (SELECT SUM(sold_price)
-    FROM sold_projects
-    WHERE YEAR(sold_date) = 2022) AS revenue_2022,
-    ((SELECT SUM(sold_price)
-    FROM sold_projects
-    WHERE YEAR(sold_date) = 2023) -
-    (SELECT SUM(sold_price)
-    FROM sold_projects
-    WHERE YEAR(sold_date) = 2022)) AS revenue_difference;
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2023) AS revenue_2023,
+	(SELECT SUM(sold_price)
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2022) AS revenue_2022,
+	((SELECT SUM(sold_price)
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2023) -
+	(SELECT SUM(sold_price)
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2022)) AS revenue_difference;
     
 /*
 Expected output
@@ -117,17 +117,17 @@ revenue_2023			revenue_2022			revenue_difference
 
 SELECT
 	(SELECT COUNT(project_id)
-    FROM sold_projects
-    WHERE YEAR(sold_date) = 2023) AS total_sales_2023,
-    (SELECT COUNT(project_id)
-    FROM sold_projects
-    WHERE YEAR(sold_date) = 2022) AS total_sales_2022,
-    ((SELECT COUNT(project_id)
-    FROM sold_projects
-    WHERE YEAR(sold_date) = 2023) -
-    (SELECT COUNT(project_id)
-    FROM sold_projects
-    WHERE YEAR(sold_date) = 2022)) AS total_sales_diff;
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2023) AS total_sales_2023,
+	(SELECT COUNT(project_id)
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2022) AS total_sales_2022,
+	((SELECT COUNT(project_id)
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2023) -
+	(SELECT COUNT(project_id)
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2022)) AS total_sales_diff;
     
 /*
 Expected output
@@ -141,17 +141,17 @@ total_sales_2023			total_sales_2022			total_sales_diff
     
 SELECT
 	(SELECT ROUND(AVG(sold_price))
-    FROM sold_projects
-    WHERE YEAR(sold_date) = 2023) AS avg_ticket_2023,
-    (SELECT ROUND(AVG(sold_price))
-    FROM sold_projects
-    WHERE YEAR(sold_date) = 2022) AS avg_ticket_2022,
-    ((SELECT ROUND(AVG(sold_price))
-    FROM sold_projects
-    WHERE YEAR(sold_date) = 2023) -
-    (SELECT ROUND(AVG(sold_price))
-    FROM sold_projects
-    WHERE YEAR(sold_date) = 2022)) AS avg_ticket_diff;
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2023) AS avg_ticket_2023,
+	(SELECT ROUND(AVG(sold_price))
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2022) AS avg_ticket_2022,
+	((SELECT ROUND(AVG(sold_price))
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2023) -
+	(SELECT ROUND(AVG(sold_price))
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2022)) AS avg_ticket_diff;
     
 /*
 Expected output
@@ -165,17 +165,17 @@ avg_ticket_2023			avg_ticket_2022			avg_ticket_diff
     
 SELECT
 	(SELECT ROUND(AVG(sale_accuracy), 1)
-    FROM sold_projects
-    WHERE YEAR(sold_date) = 2023) AS sale_accuracy_2023,
-    (SELECT ROUND(AVG(sale_accuracy), 1)
-    FROM sold_projects
-    WHERE YEAR(sold_date) = 2022) AS sale_accuracy_2022,
-    ((SELECT ROUND(AVG(sale_accuracy), 1)
-    FROM sold_projects
-    WHERE YEAR(sold_date) = 2023) -
-    (SELECT ROUND(AVG(sale_accuracy), 1)
-    FROM sold_projects
-    WHERE YEAR(sold_date) = 2022)) AS accuracy_diff;
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2023) AS sale_accuracy_2023,
+	(SELECT ROUND(AVG(sale_accuracy), 1)
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2022) AS sale_accuracy_2022,
+	((SELECT ROUND(AVG(sale_accuracy), 1)
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2023) -
+	(SELECT ROUND(AVG(sale_accuracy), 1)
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2022)) AS accuracy_diff;
     
 /*
 Expected output
@@ -189,17 +189,17 @@ sale_accuracy_2023			sale_accuracy_2022			accuracy_diff
 
 SELECT
 	(SELECT ROUND(AVG(customer_satisfaction), 1)
-    FROM sold_projects
-    WHERE YEAR(sold_date) = 2023) AS satisfaction_2023,
-    (SELECT ROUND(AVG(customer_satisfaction), 1)
-    FROM sold_projects
-    WHERE YEAR(sold_date) = 2022) AS satisfaction_2022,
-    ((SELECT ROUND(AVG(customer_satisfaction), 1)
-    FROM sold_projects
-    WHERE YEAR(sold_date) = 2023) -
-    (SELECT ROUND(AVG(customer_satisfaction), 1)
-    FROM sold_projects
-    WHERE YEAR(sold_date) = 2022)) AS satisfaction_diff;
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2023) AS satisfaction_2023,
+	(SELECT ROUND(AVG(customer_satisfaction), 1)
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2022) AS satisfaction_2022,
+	((SELECT ROUND(AVG(customer_satisfaction), 1)
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2023) -
+	(SELECT ROUND(AVG(customer_satisfaction), 1)
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2022)) AS satisfaction_diff;
     
 /*
 Expected output
@@ -219,7 +219,7 @@ data viz tool
 
 WITH sales_2023 AS (
 	SELECT
-		MONTH(sold_date) AS month_number,
+	MONTH(sold_date) AS month_number,
         MONTHNAME(sold_date) AS month_name,
         SUM(sold_price) AS revenue_2023,
         COUNT(project_id) AS total_sales_2023,
@@ -229,12 +229,12 @@ WITH sales_2023 AS (
 	FROM sold_projects
     WHERE YEAR(sold_date) = 2023
     GROUP BY 
-		MONTH(sold_date),
+	MONTH(sold_date),
         MONTHNAME(sold_date)
 ),
 sales_2022 AS (
 	SELECT
-		MONTH(sold_date) AS month_number,
+	MONTH(sold_date) AS month_number,
         MONTHNAME(sold_date) AS month_name,
         SUM(sold_price) AS revenue_2022,
         COUNT(project_id) AS total_sales_2022,
@@ -244,7 +244,7 @@ sales_2022 AS (
 	FROM sold_projects
     WHERE YEAR(sold_date) = 2022
     GROUP BY 
-		MONTH(sold_date),
+	MONTH(sold_date),
         MONTHNAME(sold_date)
 )
 
