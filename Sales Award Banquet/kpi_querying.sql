@@ -109,7 +109,7 @@ SELECT
 Expected output
 
 revenue_2023			revenue_2022			revenue_difference
-122298912				  70487142				  51811770
+122298912			70487142			51811770
 */
 
 
@@ -133,7 +133,7 @@ SELECT
 Expected output
     
 total_sales_2023			total_sales_2022			total_sales_diff
-1330								  1193								   137
+1330					1193					137
 */
     
     
@@ -157,7 +157,7 @@ SELECT
 Expected output
     
 avg_ticket_2023			avg_ticket_2022			avg_ticket_diff
-91954							   59084							  32870
+91954				59084				32870
 */
     
     
@@ -181,7 +181,7 @@ SELECT
 Expected output
     
 sale_accuracy_2023			sale_accuracy_2022			accuracy_diff
-8.0										  7.7										  0.3
+8.0					7.7					0.3
 */
     
     
@@ -205,7 +205,7 @@ SELECT
 Expected output
     
 satisfactions_2023			satisfaction_2022			satisfaction_diff
-7.4									7.8									-0.4
+7.4					7.8					-0.4
 */
     
     
@@ -258,17 +258,17 @@ JOIN sales_2022 s22 ON s23.month_number = s22.month_number;
 /*
 Expected output
 
-month_number			month_name			revenue_2023			total_sales_2023			avg_ticket_2023			sale_accuracy_2023			customer_satisfaction_2023			revenue_2022			total_sales_2022			avg_ticket_2022			sale_accuracy_2022			customer_satisfaction_2022
-1							    January					10410819				  109							      95512						    8.1							      	7.3											        6986414				   	115	      						60751				     		7.7	      							8.2
-2							    February				9313658				  	99			    					94077			    			8.3		      						7.5								        			8077136	  				134				      			60277    						7.5				      				8.0
-3						    	March					  9421557					  108					      		87237	    					8.0					      			7.2										        	7654299		  			121						      	63259		    				7.5							      	8.1
-4							    April						9501713				  	102						      	93154			    			8.0								      7.3	        										6911723			  		112	      						61712				    		7.4      								8.2
-5							    May						  12186878			  	132				      			92325					    	8.0      								7.2					      				  		6948030				  	114				      			60948		    				7.4			      					8.3
-6							    June						11755002			  	119	      						98782		    				7.9			      					7.4								        			5701315					  98							    	58177				    		7.8						      		7.7
-7							    July						10302070			  	117				      			88052				    		8.1						      		7.4        											4882924		  			80			    					61037		    				7.9	      							7.4
-8							    August					11432946			  	124		      					92201		    				8.0		      						7.7				        							4538748			  		84					    			54033				    		7.9				      				7.6
-9							    September				11559232			  	124					      		93220				    		7.9					      			7.4								        			4794650				  	81						    		59193	    					8.1		      						7.7
-10						  	October					9183563				  	108	      						85033					    	7.9								      7.6		        									5441432					  103			      				52829			    			7.9					      			7.3
-11						  	November				9481343				  	102				      			92954					    	7.9							      	7.5						        					4858863  					92						    		52814					    	7.8			      					7.4
-12						  	December				7750131				  	86							    	90118				    		7.9							      	7.3										        	3691608	  				59								    62570						    7.8						      		7.5
+month_number	month_name	revenue_2023	total_sales_2023	avg_ticket_2023		sale_accuracy_2023	customer_satisfaction_2023	revenue_2022		total_sales_2022	avg_ticket_2022		sale_accuracy_2022	customer_satisfaction_2022
+1		January		10410819	109			95512			8.1			7.3				6986414			115	      		60751			7.7	      		8.2
+2		February	9313658		99			94077			8.3		      	7.5				8077136	  		134			60277    		7.5			8.0
+3		March		9421557		108			87237	    		8.0			7.2				7654299		  	121			63259		    	7.5			8.1
+4		April		9501713		102			93154			8.0			7.3	        		6911723			112	      		61712			7.4      		8.2
+5		May		12186878	132			92325			8.0      		7.2				6948030			114			60948		    	7.4			8.3
+6		June		11755002	119	      		98782		    	7.9			7.4				5701315			98			58177			7.8			7.7
+7		July		10302070	117			88052			8.1			7.4        			4882924		  	80			61037		    	7.9	      		7.4
+8		August		11432946	124		      	92201		    	8.0		      	7.7				4538748			84			54033			7.9			7.6
+9		September	11559232	124			93220			7.9			7.4				4794650			81			59193	    		8.1		      	7.7
+10		October		9183563		108	      		85033			7.9			7.6		        	5441432			103			52829			7.9			7.3
+11		November	9481343		102			92954			7.9			7.5				4858863  		92			52814			7.8			7.4
+12		December	7750131		86			90118			7.9			7.3				3691608	  		59			62570			7.8			7.5
 */
