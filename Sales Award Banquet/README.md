@@ -44,10 +44,7 @@ be ordered in time.
 
 ## Sales Data
 
-[sold_projects.csv](https://github.com/andrwbrntt/Portfolio/files/14060188/sold_projects.csv)
 
-[salespersons.csv](https://github.com/andrwbrntt/Portfolio/files/14060187/salespersons.csv)
-
-[sales_data.xlsx](https://github.com/andrwbrntt/Portfolio/files/14060186/sales_data.xlsx)
+[sales_data.xlsx](https://github.com/andrwbrntt/Portfolio/files/14101719/sales_data.xlsx)
 
 Custom made database
