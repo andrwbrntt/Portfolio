@@ -45,7 +45,7 @@ ORDER BY proration DESC;
 /*
 Expected output
 
-Salesperson_id		start_date	salesperson_name	revenue_earned		tenure_in_months	proration
+salesperson_id		start_date	salesperson_name	revenue_earned		tenure_in_months	proration
 32			2023-02-15	Samuel Young		3967853			10			4761424
 31		    	2023-01-06	Ella Walker		4140031			11			4516397
 30			2022-11-18	Joseph Robinson		3554279			12			3554279
