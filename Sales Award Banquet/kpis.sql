@@ -1,5 +1,6 @@
 /*
-Our first objective is to find the KPIs the Director was looking for:
+Let's find the KPIs needed
+
 1. Total Revenue
 2. Total Number of Sales
 3. Average Ticket
@@ -18,11 +19,14 @@ WHERE YEAR(sold_date) = 2023;
 
 -- Expected output for 2023 revenue = 122298912 --
 
+
 SELECT SUM(sold_price) AS revenue_2022
 FROM sold_projects
 WHERE YEAR(sold_date) = 2022;
 
 -- Expected output for 2022 revenue = 70487142 --
+
+
 
 
 -- 2. Total Number of Sales --
@@ -33,11 +37,14 @@ WHERE YEAR(sold_date) = 2023;
 
 -- Expected output for 2023 number of sales = 1330 --
 
+
 SELECT COUNT(project_id) AS num_of_sales_2022
 FROM sold_projects
 WHERE YEAR(sold_date) = 2022;
 
 -- Expected output for 2022 number of sales = 1193 --
+
+
 
 
 -- 3. Average Ticket --
@@ -48,11 +55,14 @@ WHERE YEAR(sold_date) = 2023;
 
 -- Expected output for 2023 average ticket rounded to the nearest dollar = 91954 --
 
+
 SELECT ROUND(AVG(sold_price)) AS avg_sale_2022
 FROM sold_projects
 WHERE YEAR(sold_date) = 2022;
 
 -- Expected output for 2022 average sale rounded to the nearest dollar = 59084 --
+
+
 
 
 -- 4. Average Customer Satisfaction
@@ -63,11 +73,14 @@ WHERE YEAR(sold_date) = 2023;
 
 -- Expected output for 2023 average sale accuracy rounded to 1 decimal place = 8.0 --
 
+
 SELECT ROUND(AVG(sale_accuracy),1) AS avg_accuracy_2022
 FROM sold_projects
 WHERE YEAR(sold_date) = 2022;
 
 -- Expected output for 2022 average sale accuracy rounded to 1 decimal place = 7.7 --
+
+
 
 
 -- 5. Average Customer Satisfaction --
@@ -77,6 +90,7 @@ FROM sold_projects
 WHERE YEAR(sold_date) = 2023;
 
 -- Expected output for 2023 average customer satisfaction rounded to 1 decimal place = 7.4 --
+
 
 SELECT ROUND(AVG(sale_accuracy),1) AS avg_accuracy_2022
 FROM sold_projects
@@ -113,6 +127,8 @@ revenue_2023			revenue_2022			revenue_difference
 */
 
 
+
+
 -- 2. Total Number of Sales --
 
 SELECT
@@ -135,7 +151,9 @@ Expected output
 total_sales_2023			total_sales_2022			total_sales_diff
 1330					1193					137
 */
-    
+
+
+
     
 -- 3. Average Ticket --
     
@@ -159,7 +177,9 @@ Expected output
 avg_ticket_2023			avg_ticket_2022			avg_ticket_diff
 91954				59084				32870
 */
-    
+
+
+
     
 -- 4. Average Sale Accuracy --
     
@@ -184,7 +204,9 @@ sale_accuracy_2023			sale_accuracy_2022			accuracy_diff
 8.0					7.7					0.3
 */
     
-    
+
+
+
 -- 5. Average Customer Satisfaction --
 
 SELECT
@@ -211,10 +233,9 @@ satisfactions_2023			satisfaction_2022			satisfaction_diff
     
     
 /*
-Let's use a CTE to break down each of the KPIs
-by month, adding a month number and month
-name column to make it more conducive to a 
-data viz tool
+We'll be using Power BI for our visualization tool,
+so let's make a table that will give us the smoothest
+transition
 */
 
 WITH sales_2023 AS (
