@@ -1,9 +1,9 @@
--- Database creation --
+-- Database creation
 
 CREATE DATABASE sales_data;
 USE sales_data;
 
--- Table creation --
+-- Table creation
 
 CREATE TABLE salespersons (
 salesperson_id INT,
