@@ -1,11 +1,9 @@
--- Let's create the database --
-
--- I'll be using MySQL Workbench --
+-- Database creation --
 
 CREATE DATABASE sales_data;
 USE sales_data;
 
--- Now for the tables --
+-- Table creation --
 
 CREATE TABLE salespersons (
 salesperson_id INT,
@@ -38,7 +36,7 @@ In this case, the Table Data Import Wizard would not import
 the dates correctly, especially the termination_date column in
 the salespersons table.
 
-Through troubleshooting, I figured out that Excel was not
+Through troubleshooting, I also figured out that Excel was not
 producting CSVs with proper string wrapping.
 
 LOAD DATA INFILE returned a secure file privilege error on
