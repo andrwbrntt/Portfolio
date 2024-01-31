@@ -9,58 +9,58 @@ Let's find the KPIs needed
 */
 
 
--- Single Queries --
+-- Single Queries
 
--- 1. Total Revenue --
+-- 1. Total Revenue
 
 SELECT SUM(sold_price) AS revenue_2023
 FROM sold_projects
 WHERE YEAR(sold_date) = 2023;
 
--- Expected output for 2023 revenue = 122298912 --
+-- Expected output for 2023 revenue = 122298912
 
 
 SELECT SUM(sold_price) AS revenue_2022
 FROM sold_projects
 WHERE YEAR(sold_date) = 2022;
 
--- Expected output for 2022 revenue = 70487142 --
+-- Expected output for 2022 revenue = 70487142
 
 
 
 
--- 2. Total Number of Sales --
+-- 2. Total Number of Sales
 
 SELECT COUNT(project_id) AS num_of_sales_2023
 FROM sold_projects
 WHERE YEAR(sold_date) = 2023;
 
--- Expected output for 2023 number of sales = 1330 --
+-- Expected output for 2023 number of sales = 1330
 
 
 SELECT COUNT(project_id) AS num_of_sales_2022
 FROM sold_projects
 WHERE YEAR(sold_date) = 2022;
 
--- Expected output for 2022 number of sales = 1193 --
+-- Expected output for 2022 number of sales = 1193
 
 
 
 
--- 3. Average Ticket --
+-- 3. Average Ticket
 
 SELECT ROUND(AVG(sold_price)) AS avg_sale_2023
 FROM sold_projects
 WHERE YEAR(sold_date) = 2023;
 
--- Expected output for 2023 average ticket rounded to the nearest dollar = 91954 --
+-- Expected output for 2023 average ticket rounded to the nearest dollar = 91954
 
 
 SELECT ROUND(AVG(sold_price)) AS avg_sale_2022
 FROM sold_projects
 WHERE YEAR(sold_date) = 2022;
 
--- Expected output for 2022 average sale rounded to the nearest dollar = 59084 --
+-- Expected output for 2022 average sale rounded to the nearest dollar = 59084
 
 
 
@@ -71,39 +71,39 @@ SELECT ROUND(AVG(sale_accuracy),1) AS avg_accuracy_2023
 FROM sold_projects
 WHERE YEAR(sold_date) = 2023;
 
--- Expected output for 2023 average sale accuracy rounded to 1 decimal place = 8.0 --
+-- Expected output for 2023 average sale accuracy rounded to 1 decimal place = 8.0
 
 
 SELECT ROUND(AVG(sale_accuracy),1) AS avg_accuracy_2022
 FROM sold_projects
 WHERE YEAR(sold_date) = 2022;
 
--- Expected output for 2022 average sale accuracy rounded to 1 decimal place = 7.7 --
+-- Expected output for 2022 average sale accuracy rounded to 1 decimal place = 7.7
 
 
 
 
--- 5. Average Customer Satisfaction --
+-- 5. Average Customer Satisfaction
 
 SELECT ROUND(AVG(customer_satisfaction),1) AS avg_satisfaction_2023
 FROM sold_projects
 WHERE YEAR(sold_date) = 2023;
 
--- Expected output for 2023 average customer satisfaction rounded to 1 decimal place = 7.4 --
+-- Expected output for 2023 average customer satisfaction rounded to 1 decimal place = 7.4
 
 
 SELECT ROUND(AVG(sale_accuracy),1) AS avg_accuracy_2022
 FROM sold_projects
 WHERE YEAR(sold_date) = 2022;
 
--- Expected output for 2022 average customer satisfaction rounded to 1 decimal place = 7.7 --
+-- Expected output for 2022 average customer satisfaction rounded to 1 decimal place = 7.7
 
 
 
 
--- Subqueries --
+-- Subqueries
 
--- 1. Total Sales --
+-- 1. Total Sales
 
 SELECT
 	(SELECT SUM(sold_price)
@@ -129,7 +129,7 @@ revenue_2023			revenue_2022			revenue_difference
 
 
 
--- 2. Total Number of Sales --
+-- 2. Total Number of Sales
 
 SELECT
 	(SELECT COUNT(project_id)
@@ -155,7 +155,7 @@ total_sales_2023			total_sales_2022			total_sales_diff
 
 
     
--- 3. Average Ticket --
+-- 3. Average Ticket
     
 SELECT
 	(SELECT ROUND(AVG(sold_price))
@@ -181,7 +181,7 @@ avg_ticket_2023			avg_ticket_2022			avg_ticket_diff
 
 
     
--- 4. Average Sale Accuracy --
+-- 4. Average Sale Accuracy
     
 SELECT
 	(SELECT ROUND(AVG(sale_accuracy), 1)
@@ -207,7 +207,7 @@ sale_accuracy_2023			sale_accuracy_2022			accuracy_diff
 
 
 
--- 5. Average Customer Satisfaction --
+-- 5. Average Customer Satisfaction
 
 SELECT
 	(SELECT ROUND(AVG(customer_satisfaction), 1)
@@ -256,7 +256,9 @@ WITH sales_2023 AS (
 sales_2022 AS (
 	SELECT
 	MONTH(sold_date) AS month_number,
+	-- This will extract the month as number
         MONTHNAME(sold_date) AS month_name,
+	-- This will extract the month's name
         SUM(sold_price) AS revenue_2022,
         COUNT(project_id) AS total_sales_2022,
         ROUND(AVG(sold_price)) AS avg_ticket_2022,
