@@ -72,3 +72,56 @@ Expected output
 salesperson_name	avg_sale_accuracy
 Jacob Ramirez		8.7
 */
+
+
+
+
+-- The Sixer Award -- 
+
+SELECT CONCAT(s.first_name, ' ', s.last_name) AS salesperson_name,
+COUNT(sold_price) AS num_of_projects
+FROM salespersons s
+JOIN sold_projects p ON s.salesperson_id = p.salesperson_id
+WHERE s.termination_date IS NULL AND YEAR(sold_date) = 2023 AND sold_price >
+	(SELECT ROUND(AVG(sold_price), 2) AS avg_price
+	FROM sold_projects
+	WHERE YEAR(sold_date) = 2023 AND sold_price >= 100000)
+GROUP BY salesperson_name
+ORDER BY num_of_projects DESC;
+
+/*
+Expected output
+
+salesperson_name	num_of_projects
+Joseph Robinson		16
+Jackson Thomas		15
+Matthew White		15
+Amelia Anderson		13
+Emily Thompson		13
+Emma Smith		12
+Avery Lewis		12
+Liam Johnson		11
+Olivia Williams		11
+Mia Hernandez		11
+Aiden Moore		11
+Alexander Sanchez	11
+Ella Walker		11
+Samuel Young		11
+Ethan Martinez		10
+Logan Wilson		10
+Sebastian Perez		10
+Ava Jones		9
+Mason Davis		9
+Sophia Rodriguez	9
+Elizabeth Harris	9
+Harper Taylor		8
+Lucas Garcia		7
+Charlotte Gonzalez	7
+Daniel Martin		7
+Sofia Clark		6
+Abigail Lee		5
+Isabella Miller		3
+Scarlett Allen		3
+Henry King		1
+Grace Wright		1
+*/
