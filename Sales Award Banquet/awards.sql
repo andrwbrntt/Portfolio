@@ -1,5 +1,12 @@
--- Let's figure out which salespeople won which awards
+/*
+Let's figure out which salespeople won which awards
 
+1. Rookie of the Year
+2. The Precision Award
+3. The Sixer Award
+4. The High-Roller Award
+5. The MVP Award
+*/
 
 
 -- 1. Rookie of the Year
