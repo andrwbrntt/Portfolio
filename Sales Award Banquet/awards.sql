@@ -15,7 +15,7 @@ Let's figure out which salespeople won which awards
 4. The High Roller Award
 - The most revenue earned
 
-5. The MVP
+5. The MVP Award
 - The most revenue sold with the highest sale accuracy and highest customer satisfaction
 */
 
@@ -150,4 +150,5 @@ Sophia Rodriguez	4611319
 
 
 -- 5. The MVP Award --
+
 
