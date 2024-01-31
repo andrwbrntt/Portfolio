@@ -125,3 +125,29 @@ Scarlett Allen		3
 Henry King		1
 Grace Wright		1
 */
+
+
+
+
+-- 4. The High-Roller Award --
+
+SELECT CONCAT(s.first_name, ' ', s.last_name) AS salesperson_name,
+SUM(sold_price) AS total_revenue
+FROM salespersons s
+JOIN sold_projects p ON s.salesperson_id = p.salesperson_id
+WHERE YEAR(sold_date) = 2023
+GROUP BY salesperson_name
+ORDER BY total_revenue DESC
+LIMIT 1;
+
+/*
+Expected output
+
+salesperson_name	total_revenue
+Sophia Rodriguez	4611319
+*/
+
+
+
+-- 5. The MVP Award --
+
