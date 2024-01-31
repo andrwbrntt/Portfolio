@@ -31,6 +31,7 @@ be ordered in time.
 3. **The Sixer Award**
    - Projects sold above the average of projects that are at least $100,000
    - Can have multiple winners
+   - While a winner can have multiple sales meet the criteria, the award singular
    - Wins a Hamilton Intra-Matic watch
 
 4. **The High-Roller Award**
