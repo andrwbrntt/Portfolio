@@ -1,41 +1,23 @@
-/* 
-Let's figure out which salespeople won which awards
-
-1. Rookie of the Year
- - 6 month cutoff
-	- 2022-06-01 to 2023-05-31
-
-2. The Precision Award
-- Highest sales accuracy
-
-3. The Sixer Award
-- Sales tickets above the average of sales above $100,000
-- Can have multilple winners
-
-4. The High Roller Award
-- The most revenue earned
-
-5. The MVP Award
-- The most revenue sold with the highest sale accuracy and highest customer satisfaction
-*/
+-- Let's figure out which salespeople won which awards
 
 
--- 1. Rookie of the Year --
+
+-- 1. Rookie of the Year
 
 WITH rookie_of_the_year  AS (
   SELECT s.salesperson_id, s.start_date,
   	CONCAT(s.first_name, ' ', s.last_name) AS salesperson_name,
   	SUM(p.sold_price) AS revenue_earned,
   	LEAST(12, TIMESTAMPDIFF(MONTH, s.start_date, '2023-12-31')) AS tenure_in_months 
-	-- Provides tenure in months, placing a limit of 1 year from the start date to help with proration calculation --
+	-- Provides tenure in months, placing a limit of 1 year from the start date to help with proration calculation
   FROM salespersons s
   JOIN sold_projects p ON s.salesperson_id = p.salesperson_id
   WHERE s.start_date BETWEEN '2022-06-01' AND '2023-05-31' 
-	-- This will limit the salespeople to those hired within the cutoff parameters --
+	-- This will limit the salespeople to those hired within the cutoff parameters
 	AND s.termination_date IS NULL 
-	-- This will limit the result to salespeople still with the company --
+	-- This will limit the result to salespeople still with the company
        	AND p.sold_date BETWEEN s.start_date AND DATE_ADD(s.start_date, INTERVAL 1 YEAR) 
-	-- This will limit the revenue sum of each eligible salesperson to the parameter of their first year --
+	-- This will limit the revenue sum of each eligible salesperson to the parameter of their first year
   GROUP BY s.salesperson_id
   ORDER BY revenue_earned DESC
 )
@@ -56,7 +38,7 @@ salesperson_id		start_date	salesperson_name	revenue_earned		tenure_in_months	pro
 
 
 
--- 2. The Precision Award --
+-- 2. The Precision Award
 
 SELECT CONCAT(s.first_name, ' ', s.last_name) AS salesperson_name,
 	ROUND(AVG(p.sale_accuracy), 1)  AS avg_sale_accuracy
@@ -76,7 +58,7 @@ Jacob Ramirez		8.7
 
 
 
--- The Sixer Award -- 
+-- The Sixer Award
 
 SELECT CONCAT(s.first_name, ' ', s.last_name) AS salesperson_name,
 COUNT(sold_price) AS num_of_projects
@@ -129,7 +111,7 @@ Grace Wright		1
 
 
 
--- 4. The High-Roller Award --
+-- 4. The High-Roller Award
 
 SELECT CONCAT(s.first_name, ' ', s.last_name) AS salesperson_name,
 SUM(sold_price) AS total_revenue
@@ -149,6 +131,36 @@ Sophia Rodriguez	4611319
 
 
 
--- 5. The MVP Award --
+-- 5. The MVP Award
 
+-- Finding the highest revenue earned for score calculation
 
+SELECT salesperson_id, SUM(sold_price) AS revenue_earned
+FROM sold_projects
+WHERE YEAR(sold_date) = 2023
+GROUP BY salesperson_id
+ORDER BY revenue_earned DESC
+LIMIT 1;
+
+-- Expected output for highest revenue earned in 2023 = 4611319
+
+SELECT
+	CONCAT(s.first_name, ' ', s.last_name) AS salesperson_name,
+    ROUND((0.5 *(SUM(p.sold_price)/4611319)*10 +
+    -- Revenue will weigh more because we want the other scores to be relative to amount sold
+    0.25*AVG(p.sale_accuracy) +
+    0.25*AVG(p.customer_satisfaction)), 3) AS score
+    -- This will normalize everything into a score scale of 1 - 10
+FROM salespersons s
+JOIN sold_projects p ON s.salesperson_id = p.salesperson_id
+WHERE YEAR(p.sold_date) = 2023 AND s.termination_date IS NULL
+GROUP BY salesperson_name
+ORDER BY score DESC
+LIMIT 1;
+
+/*
+Expected output
+
+salesperson_name	score
+Matthew White		8.761
+*/
