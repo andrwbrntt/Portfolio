@@ -42,19 +42,33 @@ WITH rookie_of_the_year  AS (
 
 SELECT *, ROUND(((revenue_earned / tenure_in_months) * 12)) AS proration
 FROM rookie_of_the_year
-ORDER BY proration DESC;
+ORDER BY proration DESC
+LIMIT 1;
 
 /*
 Expected output
 
 salesperson_id		start_date	salesperson_name	revenue_earned		tenure_in_months	proration
 32			2023-02-15	Samuel Young		3967853			10			4761424
-31		    	2023-01-06	Ella Walker		4140031			11			4516397
-30			2022-11-18	Joseph Robinson		3554279			12			3554279
-33			2023-05-01	Scarlett Allen		1965620			7			3369634
-29			2022-10-10	Avery Lewis		3083009			12			3083009
-27			2022-08-09	Sofia Clark		2820061			12			2820061
-26			2022-06-16	Alexander Sanchez	2070347			12			2070347
 
-Rookie of the Year is Samuel Young
+*/
+
+
+
+
+-- 2. The Precision Award --
+
+SELECT CONCAT(s.first_name, ' ', s.last_name) AS salesperson_name,
+	ROUND(AVG(p.sale_accuracy), 1)  AS avg_sale_accuracy
+FROM salespersons s
+JOIN sold_projects p ON s.salesperson_id = p.salesperson_id
+GROUP BY salesperson_name
+ORDER BY avg_sale_accuracy DESC
+LIMIT 1;
+
+/*
+Expected output
+
+salesperson_name	avg_sale_accuracy
+Jacob Ramirez		8.7
 */
