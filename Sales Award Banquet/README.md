@@ -1,10 +1,10 @@
 # Objective
 
-With the company Sales Award Banquet coming up, the Director of Sales is looking to present
-the year in review via key KPIs and compare them to the prior year.
+With the company Sales Award Banquet coming up, the Director of Sales
+is looking to present a year-in-review visualization with key KPIs.
 
-The Director also needs to know which salespeople won which awards so that the awards can
-be ordered in time.
+The Director also needs to know which salesperson won which award
+so the awards can be ordered in time.
 
 
 ## KPIs
@@ -18,37 +18,34 @@ be ordered in time.
 
 ## Award Categories
 1. **Rookie of the Year**
-   - Most revenue sold within a first-year tenure
-   - 6 month cutoff
-   - Use full year revenue where available
-   - Prorate if a full year revenue is unavailable
-   - Wins a personalized, engraved Rookie of the Year coin in a glass case
+   a. Most revenue sold within a first-year tenure
+   b. 6 month cutoff 
+   c. Use full year revenue where available
+   d. Prorate if a full year revenue is unavailable
+   e. Wins a personalized, engraved Rookie of the Year coin in a glass case
 
 2. **The Precision Award**
-   - Highest sales accuracy
-   - Wins a Montblanc Meisterstuck Platinum-Coated Rollerball
+   a. Highest sales accuracy
+   b. Wins a Montblanc Meisterstuck Platinum-Coated Rollerball
 
 3. **The Sixer Award**
-   - Projects sold above the average of projects that are at least $100,000
-   - Can have multiple winners
-   - While a winner can have multiple sales meet the criteria, the award singular
-   - Wins a Hamilton Intra-Matic watch
+   a. Projects sold above the average of projects that are at least $100,000
+   b. Can have multiple winners
+   c. While a winner can have multiple sales that meet the criteria, the award singular
+   d. Wins a Hamilton Intra-Matic watch
 
 4. **The High-Roller Award**
-   - Most revenue sold
-   - Wins a 3 day, all expenses paid trip to New York with choice of location and Michelin Star restaurant
+   a. Most revenue sold
+   b. Wins a 3 day, all expenses paid trip to New York with choice of location and Michelin Star restaurant
   
 5. **The MVP Award**
-   - The most revenue sold with the highest sale accuracy and customer satisfaction
-   - Wins a 4 day, all expenses paid trip to Bora Bora
+   a. The most revenue sold with the highest sale accuracy and customer satisfaction
+   b. Wins a 4 day, all expenses paid trip to Bora Bora
 
 
-## Sales Data
+## Project Files
 
+[Sales Award Banquet.zip](https://github.com/andrwbrntt/Portfolio/files/14133172/Sales.Award.Banquet.zip)
 
-[sales_data.xlsx](https://github.com/andrwbrntt/Portfolio/files/14120235/sales_data.xlsx)
+Custom Database
 
-[sales_award_banquet_kpis.xlsx](https://github.com/andrwbrntt/Portfolio/files/14120234/sales_award_banquet_kpis.xlsx)
-
-
-Custom made database
