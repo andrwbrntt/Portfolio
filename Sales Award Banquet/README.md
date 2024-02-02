@@ -40,6 +40,7 @@ so the awards can be ordered in time.
   
 5. **The MVP Award**
    - The most revenue sold with the highest sale accuracy and customer satisfaction
+   - Revenue should weigh 50%, accuracy & satisfaction 25% each
    - Wins a 4 day, all expenses paid trip to Bora Bora
 
 
